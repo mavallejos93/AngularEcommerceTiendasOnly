@@ -1,0 +1,32 @@
+*{
+    
+    padding-top: 0;
+}
+
+.search{
+    display: flex;
+    justify-content: flex-end;
+    
+} 
+
+.color{
+
+    background-color: rgb(211, 70, 70);
+}
+
+.btn-outline-success1 {
+    color: #ce1a1a;
+    border-color: #ddd5d5;
+  }
+
+.container{
+    background-color: rgb(251, 251, 251);
+    border-radius: 10px;
+    /* max-width: 100%; */
+    
+    
+    
+}
+ a:hover{
+    
+ }

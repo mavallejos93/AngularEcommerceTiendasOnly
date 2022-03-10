@@ -1,0 +1,66 @@
+
+
+<!-- <header >
+    
+    <button
+      class="navbar-toggler position-absolute d-md-none collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu"
+      aria-controls="sidebarMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </header> -->
+  
+  <div class="container-fluid">
+    <div class="row">
+      <nav
+        id="sidebarMenu"
+        class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+      >
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <br>
+            
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/profile']">
+                <span data-feather="profile"></span>
+                Mi cuenta
+              </a>
+            </li>
+            
+            
+            <li class="nav-item" *ngIf="identity.role == 'ADMIN'">
+              <a class="nav-link"    [routerLink]="['/product']"  >
+                <span data-feather="Productos"></span>
+                 Lista Productos
+                
+              </a>
+            </li>
+            <li class="nav-item"  *ngIf="identity.role == 'ADMIN'" >
+              <a class="nav-link"  [routerLink]="['/product/createproduct']">
+                <span data-feather="users"></span>
+                Crear Producto
+              </a>
+            </li>
+            <li class="nav-item" *ngIf="identity.role == 'ADMIN'">
+              <a class="nav-link" [routerLink]="['/user/listuser']">
+                <span data-feather="bar-chart-2"></span>
+                Usuarios
+              </a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" (click)="logout()" [routerLink]="['/login']">
+                <span data-feather="bar-chart-2"></span>
+                Cerrar sesión
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>

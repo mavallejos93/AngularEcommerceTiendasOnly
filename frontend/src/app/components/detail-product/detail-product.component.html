@@ -1,0 +1,29 @@
+
+
+
+
+
+<div class="container" >
+<div class="row" >
+    <div class="col-md-4" >
+        <img [src]=" url + 'product/img/' + product.image"  class="img-fluid" alt="">
+        <br><br>
+        <button [routerLink]="['/home']" class="btn btn btn-outline-primary btn-block ">regresar</button>
+
+    </div>
+
+   <div class="col-md-8">
+    <h3>{{product.name}}</h3>
+    <hr>
+    
+    <h4>Descripcion: {{product.description}}</h4>
+    <h4>Precio: {{product.price}}</h4>
+    <h4>Tipo: {{product.type}}</h4>
+    <h4>Stock: {{product.stock}}</h4>
+    <button  class="btn btn btn-outline-primary btn-block ">Comprar</button>
+
+
+   </div>
+
+</div>
+</div>

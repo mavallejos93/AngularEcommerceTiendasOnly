@@ -1,0 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.customPad {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 2rem;
+}

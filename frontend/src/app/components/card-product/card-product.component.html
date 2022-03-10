@@ -1,0 +1,55 @@
+
+        <div class="container">
+          
+          <div class="row row-cols-1  row-cols-md-4 g-4">
+            <div div class="col"  class="card animated fadeIn fast" *ngFor="let item of product" class="espacio" >
+              <div  class="card h-100" >
+                <img class="card-img-top" height="250" width="100%" [src]=" url + 'product/img/' + item.image" [alt]="item.name" >  
+                <div class="card-body">
+                   <h5 class="card-title"> <b>{{ item.name }} </b> </h5>
+                   <h6 class="text-muted"> {{ item.description }} </h6>
+                   <small class="card-text">Precio $ <b>{{ item.price }}</b> </small>
+                <div >
+                 
+                </div>
+              </div>
+              <button  [routerLink]="['/detailproduct', item._id]" type="button" class=" btn btn-outline-primary btn-block">Mas Info....</button>
+              <button type="button" class=" btn btn-outline-primary btn-block">Agregar al carrito</button>
+            </div>
+          </div>
+                 
+    
+ 
+
+ 
+
+
+
+
+      
+                
+               
+                
+                
+
+                
+            
+                 
+                
+                 
+           
+
+            
+              
+
+           
+            
+            
+            
+
+
+
+    
+ 
+    
+            

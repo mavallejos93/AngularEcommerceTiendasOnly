@@ -1,0 +1,54 @@
+<app-sidebar></app-sidebar>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div
+      class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2>Mi perfil</h2>
+    
+    </div>
+      
+<div class="col-md-8">
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">Nombre</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{user.names}} {{user.lastName}}
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">Correo</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{user.email}}
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">movil</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{user.phoneNumber}}
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <h6 class="mb-0">Dirección</h6>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{user.address}}
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-12">
+            <a class="btn btn-info" [routerLink]="['/user/edituser/', id ]">Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>

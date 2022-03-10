@@ -1,0 +1,65 @@
+ <main class="form-signin">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <img
+      class="mb-4"
+      src="../../../../favicon.ico"
+      alt=""
+      width="72"
+      height="57"
+    />
+    <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
+
+    <div
+      *ngIf="errors"
+      class="alert alert-danger alert-dismissible"
+      role="alert"
+    >
+      <div class="alert-message">
+        {{ errors }}
+      </div>
+      <button
+        type="button"
+        (click)="endError()"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">X</span>
+      </button>
+    </div>
+    <div class="form-floating">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+        #email="ngModel"
+        name="email"
+        [(ngModel)]="user.email"
+        required
+      />
+      <label for="floatingInput">Correo Electronico</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        #pass="ngModel"
+        name="pass"
+        [(ngModel)]="user.pass"
+        required
+      />
+      <label for="floatingPassword">Contraseña</label>
+    </div>
+
+    <!-- <div class="checkbox mb-3">
+      <label> <input type="checkbox" value="remember-me" /> Recuerdame </label>
+    </div> -->
+    <button class="w-100 btn btn-lg btn-primary" type="submit">ENTRAR</button>
+    <div><a  [routerLink]="['/register/' ]">Registrarte</a></div>
+    <p class="mt-5 mb-3 text-muted">&copy; BTADevs</p>
+  </form>
+</main>
+ 
